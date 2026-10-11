@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Browsers get no access. Only the Netlify function (Admin SDK) reads and writes.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

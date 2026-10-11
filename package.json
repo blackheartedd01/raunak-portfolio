@@ -1,0 +1,9 @@
+{
+  "name": "raunak-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio website with a Netlify Functions + Firebase Firestore contact backend",
+  "scripts": { "dev": "netlify dev" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "firebase-admin": "^12.7.0" }
+}

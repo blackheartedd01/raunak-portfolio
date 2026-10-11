@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raunak Kumar Shriwastav | Python Backend Developer</title>
+<meta name="description" content="Python backend developer at TCS building Django, DRF and FastAPI services, test automation and LLM-powered applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070713;--glass:#ffffff0d;--glass2:#ffffff14;--bd:#ffffff1f;--tx:#f1f1fb;--mut:#a4a6c6;
+--a:#8b5cf6;--b:#22d3ee;--c:#f472b6;--grad:linear-gradient(120deg,#a78bfa,#22d3ee 50%,#f472b6);
+--h:'Sora',system-ui,sans-serif;--p:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--tx);font:400 1.04rem/1.7 var(--p);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--b);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1180px,92%);margin:auto}
+section{padding:100px 0;position:relative}
+h1,h2,h3{font-family:var(--h);line-height:1.08;letter-spacing:-.03em}
+h2{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;margin-bottom:14px}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:flow 8s linear infinite}
+@keyframes flow{to{background-position:200% center}}
+.lead{color:var(--mut);max-width:60ch;margin-bottom:48px;font-size:1.1rem}
+/* aurora background */
+.aur{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.aur i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.5;animation:float 18s ease-in-out infinite alternate}
+.aur i:nth-child(1){width:46vw;height:46vw;background:#6d28d9;top:-12vw;left:-8vw}
+.aur i:nth-child(2){width:38vw;height:38vw;background:#0891b2;top:30vh;right:-12vw;animation-delay:-6s}
+.aur i:nth-child(3){width:34vw;height:34vw;background:#be185d;bottom:-14vw;left:25vw;animation-delay:-11s;opacity:.35}
+@keyframes float{to{transform:translate(6vw,5vh) scale(1.15)}}
+.aur:after{content:"";position:absolute;inset:0;background-image:radial-gradient(#ffffff14 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%)}
+/* glass + spotlight */
+.gl{position:relative;background:var(--glass);border:1px solid var(--bd);border-radius:24px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);overflow:hidden;transition:transform .35s,border-color .35s}
+.gl:before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),#8b5cf633,transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.gl:hover{border-color:#ffffff40;transform:translateY(-4px)}
+.gl:hover:before{opacity:1}
+/* nav */
+nav{position:fixed;top:16px;left:0;right:0;z-index:50}
+nav .in{width:min(1020px,92%);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 24px;border-radius:99px;background:#0d0d22b3;border:1px solid var(--bd);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.logo{font:800 1.2rem var(--h);text-decoration:none}
+.links{display:flex;gap:2px;list-style:none;padding:0}
+.links a{display:block;padding:9px 16px;border-radius:99px;text-decoration:none;color:var(--mut);font-weight:500;font-size:.92rem;transition:.25s}
+.links a:hover{color:#fff;background:var(--glass2)}
+.links .hi{background:var(--grad);color:#0a0a1a;font-weight:600}
+.links .hi:hover{color:#0a0a1a;background:var(--grad);filter:brightness(1.15)}
+.burger{display:none;background:var(--glass2);border:1px solid var(--bd);color:var(--tx);border-radius:99px;padding:9px 18px;font:500 .9rem var(--p);cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:99px;font:600 1rem var(--p);text-decoration:none;border:1px solid var(--bd);cursor:pointer;color:var(--tx);background:var(--glass);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);background:var(--glass2)}
+.btn.main{background:var(--grad);border:0;color:#0a0a1a;box-shadow:0 10px 40px #8b5cf655}
+.btn.main:hover{box-shadow:0 14px 50px #22d3ee66}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.badge{display:inline-flex;gap:10px;align-items:center;padding:8px 18px;border-radius:99px;background:var(--glass);border:1px solid var(--bd);font-size:.9rem;color:var(--mut);margin-bottom:28px}
+.dot{width:9px;height:9px;border-radius:50%;background:#34d399;animation:pl 2s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 #34d399aa}100%{box-shadow:0 0 0 10px #34d39900}}
+h1{font-size:clamp(2.4rem,5.4vw,4.6rem);font-weight:800;overflow-wrap:break-word}
+.hero .wrap>*{min-width:0}
+.role{font:600 clamp(1.15rem,2.4vw,1.55rem) var(--h);margin:22px 0 14px;color:#dcd8ff;min-height:1.6em}
+.role span:after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--b);margin-left:4px;vertical-align:-.15em;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.hero p.d{color:var(--mut);max-width:54ch;margin-bottom:36px;font-size:1.1rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.orb{position:relative;width:min(340px,80%);aspect-ratio:1;margin:auto}
+.orb .ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,#8b5cf6,#22d3ee,#f472b6,#8b5cf6);animation:spin 9s linear infinite;filter:blur(2px)}
+.orb .ring:after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--bg)}
+.orb .core{position:absolute;inset:18px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#3b2a8c,#0e0b2a 70%);font:800 5.4rem var(--h);letter-spacing:-.06em}
+@keyframes spin{to{transform:rotate(360deg)}}
+.chip{position:absolute;padding:9px 16px;border-radius:99px;background:#12122cd9;border:1px solid var(--bd);backdrop-filter:blur(10px);font:600 .82rem var(--h);animation:bob 5s ease-in-out infinite alternate}
+.chip:nth-of-type(1){top:6%;left:-14%}.chip:nth-of-type(2){top:38%;right:-18%;animation-delay:-2s}.chip:nth-of-type(3){bottom:6%;left:-6%;animation-delay:-3.5s}
+@keyframes bob{to{transform:translateY(-14px)}}
+/* marquee */
+.mq{border-block:1px solid var(--bd);background:#ffffff06;overflow:hidden;padding:20px 0}
+.mq span{padding-right:56px}
+.mq div{display:flex;width:max-content;animation:mq 32s linear infinite;font:700 1.35rem var(--h);color:#6e7096;white-space:nowrap}
+.mq b{color:#c9c7f2;font-weight:700}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bento .gl{padding:30px}
+.s2{grid-column:span 2}.r2{grid-row:span 2}
+.num{font:800 3.4rem var(--h);line-height:1}
+.mut{color:var(--mut)}
+.bento p{color:var(--mut)}.bento p+p{margin-top:14px}.bento p strong{color:var(--tx);font-weight:600}
+.ic{font-size:1.7rem;margin-bottom:12px}
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk .gl{padding:30px}
+.sk .gl:last-child{grid-column:1/-1}
+.sk h3{font-size:1.3rem;margin-bottom:20px}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags span{padding:7px 14px;border-radius:99px;background:#ffffff10;border:1px solid var(--bd);font-size:.85rem;font-weight:500;transition:.25s}
+.tags span:hover{background:var(--a);border-color:var(--a)}
+/* timeline */
+.tl{position:relative;display:grid;gap:22px;padding-left:38px}
+.tl:before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--a),var(--b),transparent)}
+.job{padding:32px}
+.job:after{content:"";position:absolute;left:-38px;top:38px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--b);box-shadow:0 0 18px var(--b)}
+.job{overflow:visible}
+.job header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;align-items:center}
+.job h3{font-size:1.4rem}
+.when{display:inline-block;padding:5px 14px;border-radius:99px;background:#22d3ee1f;color:#7ee8fa;font:600 .82rem var(--h)}
+.org{color:var(--mut);margin:6px 0 18px}
+.job ul{padding-left:20px;display:grid;gap:10px;color:#cfd0ea}
+.job li::marker{color:var(--c)}
+/* project */
+.proj{display:grid;grid-template-columns:.9fr 1.1fr;border-radius:32px}
+.proj .l{padding:48px;background:linear-gradient(145deg,#6d28d9cc,#0e7490cc 70%,#be185dcc);display:flex;flex-direction:column;justify-content:space-between;gap:36px}
+.proj .l h3{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800}
+.proj .l .tags span{background:#00000033;border-color:#ffffff40}
+.proj .r{padding:48px}
+.proj ul{padding-left:20px;display:grid;gap:14px;color:#d4d5ee}
+.proj li::marker{color:var(--b)}
+/* awards */
+.aw{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.aw .gl{padding:28px}
+.aw h3{font-size:1.1rem;margin-bottom:8px}
+.aw p{color:var(--mut);font-size:.93rem;line-height:1.6}
+.edu{margin-top:18px;padding:26px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+.edu b{font:700 1.2rem var(--h)}
+/* contact */
+.ct{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
+.ci{display:grid;gap:14px;align-content:start}
+.ci a{display:flex;gap:16px;align-items:center;padding:20px 22px;border-radius:20px;text-decoration:none;word-break:break-word}
+.ci a span{flex:none;width:44px;height:44px;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-size:1.2rem}
+.ci small{display:block;color:var(--mut);font-size:.8rem}
+form{padding:36px;display:grid;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:8px;font-weight:500;font-size:.92rem}
+input,textarea{width:100%;background:#0a0a1c99;border:1px solid var(--bd);border-radius:14px;padding:15px 17px;color:var(--tx);font:inherit;transition:.25s}
+input:focus,textarea:focus{outline:none;border-color:var(--b);box-shadow:0 0 0 4px #22d3ee22}
+textarea{min-height:150px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#msg{min-height:1.4em;font-weight:500}
+#msg.ok{color:#6ee7b7}#msg.err{color:#fda4af}
+footer{border-top:1px solid var(--bd);padding:34px 0;text-align:center;color:var(--mut);font-size:.92rem}
+.rv{opacity:0;translate:0 28px;transition:opacity .8s,translate .8s,transform .35s,border-color .35s}
+.rv.on{opacity:1;translate:0 0}
+@media(max-width:980px){
+.hero .wrap,.proj,.ct{grid-template-columns:1fr}
+.hero{min-height:auto}.orb{margin-top:30px;width:min(280px,70%)}.orb .core{font-size:4.2rem}
+.bento,.aw{grid-template-columns:1fr 1fr}.sk{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+section{padding:72px 0}
+.burger{display:block}
+.links{display:none;position:absolute;top:70px;left:4%;right:4%;flex-direction:column;background:#0d0d22f2;border:1px solid var(--bd);border-radius:24px;padding:12px;backdrop-filter:blur(20px)}
+.links.open{display:flex}
+.bento,.aw,.sk,.row{grid-template-columns:1fr}
+.s2{grid-column:auto}.r2{grid-row:auto}
+.proj .l,.proj .r,form,.job{padding:26px}
+.tl{padding-left:30px}.job:after{left:-30px}
+.chip{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;translate:none}}
+</style>
+<noscript><style>.rv{opacity:1;translate:none}</style></noscript>
+</head>
+<body>
+<div class="aur" aria-hidden="true"><i></i><i></i><i></i></div>
+<nav><div class="in">
+<a class="logo" href="#top">raunak<span class="g">.dev</span></a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="links">Menu</button>
+<ul class="links" id="links">
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
+<li><a href="#project">Project</a></li><li><a href="#awards">Awards</a></li><li><a class="hi" href="#contact">Contact</a></li>
+</ul></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<div class="badge"><span class="dot"></span>Available for new opportunities</div>
+<h1>Hi, I'm <span class="g">Raunak Kumar Shriwastav</span></h1>
+<div class="role"><span id="type"></span></div>
+<p class="d">I build fast, reliable REST APIs with Django and FastAPI, test them end to end, and bring LLM features into real enterprise software at TCS.</p>
+<div class="cta"><a class="btn main" href="#contact">Let's work together</a><a class="btn" href="#experience">View experience</a></div>
+</div>
+<div class="orb"><div class="ring"></div><div class="core"><span class="g">RK</span></div>
+<span class="chip">🐍 Python</span><span class="chip">⚡ FastAPI</span><span class="chip">🤖 LLM + RAG</span></div>
+</div></header>
+
+<div class="mq" aria-hidden="true"><div>
+<span><b>Python</b></span><span>Django</span><span><b>FastAPI</b></span><span>DRF</span><span><b>PostgreSQL</b></span><span>Pytest</span><span><b>Selenium</b></span><span>Postman</span><span><b>Generative AI</b></span><span>RAG</span>
+<span><b>Python</b></span><span>Django</span><span><b>FastAPI</b></span><span>DRF</span><span><b>PostgreSQL</b></span><span>Pytest</span><span><b>Selenium</b></span><span>Postman</span><span><b>Generative AI</b></span><span>RAG</span>
+</div></div>
+
+<section id="about"><div class="wrap">
+<h2 class="rv">Professional <span class="g">summary</span></h2>
+<p class="lead rv">Based in Noida, Uttar Pradesh, India.</p>
+<div class="bento rv">
+<div class="gl s2 r2"><div class="ic">👨‍💻</div>
+<p>Python Backend Developer with professional experience at <strong>Tata Consultancy Services (TCS)</strong> in backend application development, REST API development, software testing, test automation, and enterprise platform integration.</p>
+<p>Hands-on experience with <strong>Python, Django, Django REST Framework, FastAPI</strong>, scalable API development, API testing, <strong>Selenium with Python, Pytest</strong>, performance and load testing, <strong>SQL, PostgreSQL, Generative AI, LLM integration, RAG architecture</strong>, and chatbot-oriented web application integration.</p>
+<p>Experienced in developing and validating software solutions for enterprise manufacturing environments and collaborating with global teams.</p></div>
+<div class="gl"><div class="num g" data-n="30" data-s="+">0</div><p>Global manufacturing sites on the Tulip Platform</p></div>
+<div class="gl"><div class="num g" data-n="3">0</div><p>TCS awards and recognitions</p></div>
+<div class="gl"><div class="ic">🎓</div><b>BCA, 2024</b><p>Patliputra University, Patna. Score: 72%</p></div>
+<div class="gl"><div class="ic">🏢</div><b>Programmer at TCS</b><p>Eli Lilly Manufacturing Project, since July 2025</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2 class="rv">Technical <span class="g">skills</span></h2>
+<p class="lead rv">Everything I use to build, test, validate and ship backend services.</p>
+<div class="sk rv">
+<div class="gl"><h3>💻 Programming</h3><div class="tags"><span>Python</span><span>Java</span><span>SQL</span><span>JavaScript</span></div></div>
+<div class="gl"><h3>⚙️ Backend Development</h3><div class="tags"><span>Django</span><span>Django REST Framework (DRF)</span><span>FastAPI</span><span>RESTful APIs</span><span>Scalable API Development</span><span>Backend Application Development</span></div></div>
+<div class="gl"><h3>🔌 API &amp; Testing</h3><div class="tags"><span>API Testing</span><span>Postman</span><span>Pytest</span><span>Unit Testing</span><span>Integration Testing</span><span>Regression Testing</span><span>End-to-End Testing</span></div></div>
+<div class="gl"><h3>🤖 Automation Testing</h3><div class="tags"><span>Selenium with Python</span><span>Automated Testing</span><span>Test Script Development</span></div></div>
+<div class="gl"><h3>📈 Performance</h3><div class="tags"><span>Performance Testing</span><span>Load Testing</span><span>Application Validation</span><span>Release Quality Assurance</span></div></div>
+<div class="gl"><h3>🧠 AI &amp; Machine Learning</h3><div class="tags"><span>Machine Learning</span><span>Generative AI</span><span>Large Language Models (LLMs)</span><span>RAG Architecture</span><span>AI Microservice Integration</span><span>Chatbot Development and Web Application Integration</span></div></div>
+<div class="gl"><h3>🗄️ Databases &amp; Tools</h3><div class="tags"><span>PostgreSQL</span><span>SQL Query Optimization</span><span>Git</span><span>JIRA</span><span>Tulip Platform</span></div></div>
+</div></div></section>
+
+<section id="experience"><div class="wrap">
+<h2 class="rv">Professional <span class="g">experience</span></h2>
+<p class="lead rv">Tata Consultancy Services Limited (TCS), Noida, Uttar Pradesh.</p>
+<div class="tl">
+<article class="gl job rv">
+<header><h3>Programmer – Eli Lilly Manufacturing Project</h3><span class="when">July 2025 – Present</span></header>
+<p class="org">Tata Consultancy Services Limited (TCS) | Noida, Uttar Pradesh</p>
+<ul>
+<li>Develop and support enterprise software applications on the Tulip Platform used across 30+ global manufacturing sites for Eli Lilly.</li>
+<li>Contribute to Python-based backend development and REST API workflows, with focus on reliable, maintainable and scalable application services.</li>
+<li>Build and validate API-driven application functionality using Python, Django/Django REST Framework and FastAPI concepts.</li>
+<li>Design and execute API testing using Postman and automated test coverage using Pytest to improve application reliability.</li>
+<li>Develop Selenium automation scripts with Python for functional and regression testing, reducing repetitive manual validation effort.</li>
+<li>Execute formal, informal, regression, end-to-end, performance and load testing to identify defects and validate application behavior under varying workloads.</li>
+<li>Collaborate with cross-functional global teams to troubleshoot defects, improve workflows, validate releases and maintain operational reliability.</li>
+<li>Work with SQL and PostgreSQL for data validation, query optimization and backend data-processing requirements.</li>
+<li>Support integration of AI/LLM-based capabilities and GenAI-oriented application workflows, including chatbot and web-application integration use cases.</li>
+</ul></article>
+<article class="gl job rv">
+<header><h3>Ignite Trainee – TCS Ignite Training</h3><span class="when">Jan 27, 2025 – Jun 27, 2025</span></header>
+<p class="org">Chennai, Tamil Nadu</p>
+<ul>
+<li>Completed intensive training in software engineering, backend development, REST APIs, application architecture and software testing.</li>
+<li>Developed backend web applications and RESTful APIs using Python with Django and FastAPI, along with exposure to Java Spring Boot.</li>
+<li>Worked on API design, backend logic, database operations and application testing using Python-based development practices.</li>
+<li>Built AI-oriented application components using Retrieval-Augmented Generation (RAG) architecture and Large Language Models (LLMs).</li>
+<li>Worked with SQL and PostgreSQL, including query optimization and database schema considerations for efficient data retrieval.</li>
+<li>Practiced automated and integration testing using Pytest and API testing tools.</li>
+</ul></article>
+</div></div></section>
+
+<section id="project"><div class="wrap">
+<h2 class="rv">Featured <span class="g">project</span></h2>
+<p class="lead rv">Insight.Ai, built as Backend Developer during TCS Ignite.</p>
+<div class="gl proj rv">
+<div class="l"><h3>Insight.Ai</h3><div class="tags"><span>Django</span><span>FastAPI</span><span>Llama 2</span><span>LLM</span><span>RAG</span><span>Pytest</span><span>Postman</span></div></div>
+<div class="r"><ul>
+<li>Engineered a scalable backend system using Django and FastAPI for multi-format enterprise dataset processing.</li>
+<li>Developed REST API functionality for backend data processing and application integration.</li>
+<li>Integrated Llama 2 and LLM capabilities to support natural-language queries and context-aware data analysis.</li>
+<li>Applied GenAI/RAG concepts for AI-enabled application workflows and chatbot-oriented interaction use cases.</li>
+<li>Implemented unit and integration test suites using Pytest and API validation using Postman to improve backend reliability.</li>
+</ul></div>
+</div></div></section>
+
+<section id="awards"><div class="wrap">
+<h2 class="rv">Awards &amp; <span class="g">achievements</span></h2>
+<p class="lead rv">Recognition from stakeholders, international clients and teammates.</p>
+<div class="aw rv">
+<div class="gl"><div class="ic">🏆</div><h3>TCS On the Spot Award</h3><p>Recognized for multiple appreciations from key stakeholders and international clients for exceptional project execution and support.</p></div>
+<div class="gl"><div class="ic">🤝</div><h3>TCS Best Team Award</h3><p>Recognized for collaboration and high-impact delivery during global project deployments.</p></div>
+<div class="gl"><div class="ic">⚡</div><h3>Xcelerate Warrior</h3><p>Recognized for technical agility, rapid domain adoption and milestone execution in software development and quality assurance.</p></div>
+<div class="gl"><div class="ic">🚀</div><h3>TCS AI Hackathon Participant</h3><p>Built Generative AI prototypes using Large Language Model architectures.</p></div>
+</div>
+<h2 class="rv" style="margin-top:56px">Education</h2>
+<div class="gl edu rv"><div><b>Bachelor of Computer Applications (BCA)</b><br><span class="mut">Patliputra University, Patna, Bihar</span></div><span class="when">Graduated 2024 · Academic Score: 72%</span></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2 class="rv">Let's <span class="g">talk</span></h2>
+<p class="lead rv">Have a project, a role or a question? Send a message and I will reply by email or phone.</p>
+<div class="ct rv">
+<div class="ci">
+<a class="gl" href="mailto:mahaakalbhakt7488@gmail.com"><span>✉️</span><div><small>Email</small>mahaakalbhakt7488@gmail.com</div></a>
+<a class="gl" href="tel:+919113440401"><span>📞</span><div><small>Phone</small>+91 9113440401</div></a>
+<a class="gl" href="https://linkedin.com/in/raunak-kumar-shriwastav" target="_blank" rel="noopener"><span>💼</span><div><small>LinkedIn</small>raunak-kumar-shriwastav</div></a>
+<a class="gl" href="#contact"><span>📍</span><div><small>Location</small>Noida, Uttar Pradesh, India</div></a>
+</div>
+<form class="gl" id="cf" novalidate>
+<div class="row">
+<label>Your name<input name="name" required maxlength="80" autocomplete="name" placeholder="Jane Doe"></label>
+<label>Email<input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="jane@company.com"></label>
+</div>
+<label>Phone (optional)<input name="phone" type="tel" maxlength="20" autocomplete="tel" placeholder="+91 ..."></label>
+<label>Your query<textarea name="query" required maxlength="1500" placeholder="Tell me about your project or role"></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn main" id="send" type="submit" style="justify-self:start">Send message</button>
+<p id="msg" role="status" aria-live="polite"></p>
+</form>
+</div></div></section>
+
+<footer>© <span id="yr"></span> Raunak Kumar Shriwastav · Python Backend Developer · Noida, India</footer>
+
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+var burger = document.getElementById("burger"), links = document.getElementById("links");
+burger.addEventListener("click", function () { burger.setAttribute("aria-expanded", links.classList.toggle("open")); });
+links.addEventListener("click", function (e) { if (e.target.tagName === "A") { links.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); } });
+
+var roles = ["Python Backend Developer", "REST API Engineer", "Test Automation Specialist", "GenAI and LLM Integrator"];
+var el = document.getElementById("type");
+if (matchMedia("(prefers-reduced-motion: reduce)").matches) { el.textContent = roles[0]; }
+else { var r = 0, i = 0, del = false;
+  (function tick() {
+    var w = roles[r]; el.textContent = w.slice(0, i);
+    if (!del && i === w.length) { del = true; return setTimeout(tick, 1600); }
+    if (del && i === 0) { del = false; r = (r + 1) % roles.length; }
+    i += del ? -1 : 1; setTimeout(tick, del ? 35 : 75);
+  })(); }
+
+document.addEventListener("pointermove", function (e) {
+  var c = e.target.closest && e.target.closest(".gl");
+  if (c) { var b = c.getBoundingClientRect(); c.style.setProperty("--mx", e.clientX - b.left + "px"); c.style.setProperty("--my", e.clientY - b.top + "px"); }
+});
+
+function count(n) {
+  var t = +n.dataset.n, s = n.dataset.s || "", v = 0;
+  (function st() { v += Math.max(1, t / 30); if (v >= t) { n.textContent = t + s; return; } n.textContent = Math.floor(v) + s; requestAnimationFrame(st); })();
+}
+var items = document.querySelectorAll(".rv");
+if (!("IntersectionObserver" in window)) { items.forEach(function (n) { n.classList.add("on"); }); }
+else {
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (x) {
+      if (x.isIntersecting) { x.target.classList.add("on"); x.target.querySelectorAll("[data-n]").forEach(count); io.unobserve(x.target); }
+    });
+  }, { threshold: 0.08 });
+  items.forEach(function (n) { io.observe(n); });
+}
+</script>
+
+<script>
+(function () {
+  var form = document.getElementById("cf"), msg = document.getElementById("msg"), btn = document.getElementById("send");
+  function say(t, c) { msg.textContent = t; msg.className = c || ""; }
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var d = Object.fromEntries(new FormData(form));
+    if (d.website) return;
+    if (!d.name.trim() || !/^\S+@\S+\.\S+$/.test(d.email) || !d.query.trim()) return say("Enter your name, a valid email and your query.", "err");
+    btn.disabled = true; say("Sending...");
+    try {
+      var res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) });
+      var out = await res.json().catch(function () { return {}; });
+      if (res.ok) { form.reset(); say("Message sent. I will get back to you soon.", "ok"); }
+      else say(out.error || "Message not sent. Please try again.", "err");
+    } catch (err) { say("Could not reach the server. Check your connection and try again.", "err"); }
+    finally { btn.disabled = false; }
+  });
+})();
+</script>
+</body>
+</html>
